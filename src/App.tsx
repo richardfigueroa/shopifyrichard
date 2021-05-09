@@ -10,6 +10,8 @@ import findMovieByImdbId from "./helpers/movie_array_helpers";
 import useLocalStorage from "./helpers/local_storage_hook";
 import AttributionComponent from "./components/AttributionComponent";
 import SweetAlert from 'react-bootstrap-sweetalert';
+import VideoComponent from './components/VideoComponent';
+
 
 
 const DEBOUNCE_DURATION = 500;
@@ -77,13 +79,23 @@ function App() {
   let alert = <div/>;
 
   if(atMax === true){
-    alert = <SweetAlert danger title="Cannot add Nomination." onConfirm={hideAlert}>You cannot add more than 5 nominations. Please remove one if you wish to add another.</SweetAlert>;
+    alert = <SweetAlert warning title="Max nominations reached." onConfirm={hideAlert}>I am sorry user, I am afraid I can't let you do that. Please remove a nomination to add an alternate movie.</SweetAlert>;
   } else{
     alert = <div/>;
   }
+
   return (
+    <div>
+ <TitleComponent />
+ 
+
+ <VideoComponent></VideoComponent>
     <div className="app-container">
-      <TitleComponent />
+     
+     
+
+    
+
       <SearchContainerComponent
         input={input}
         onChange={onSearchBarTextChange}
@@ -102,6 +114,7 @@ function App() {
         MAX_NOMINATION_LENGTH={MAX_NOMINATION_LENGTH}
       />
       <AttributionComponent />
+    </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ const SearchBarComponent = ({ input, onChange }: IProps) => {
     <input
       className={"search-bar"}
       value={input}
-      placeholder={"E.g. Batman, Matrix"}
+      placeholder={"Search for a movie here."}
       onChange={(e) => onChange(e.target.value)}
     />
   );

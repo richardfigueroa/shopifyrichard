@@ -7,7 +7,7 @@
 }
 
 .content-list-container {
-  width: 49%;
+  width: 40%;
 }
 
 .content-list-header {
@@ -17,8 +17,8 @@
   margin-bottom: 6px;
   font-size: 20px;
   font-weight: 600;
-  background-color: #108043;
-  color: white;
+  background-color:#f7d8bb;
+  color: black;
   border: 2px solid black;
   border-radius: 8px;
 }
@@ -36,7 +36,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   margin-bottom: 6px;
-  background-color: #bbe5b3;
+  background-color: beige;
   border: 1px solid black;
   border-radius: 8px;
 }
@@ -71,8 +71,8 @@
 }
 
 .nominate-button {
-  background-color: #006fbb;
-  color: white;
+  background-color: #00bb5d;
+  color: white; 
 }
 
 .nominate-button:disabled {
@@ -85,16 +85,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  align-items: center;
+  margin-top: 15%;
+  margin-bottom: 15%;
   padding-top: 36px;
   padding-bottom: 36px;
   padding-left: 24px;
   padding-right: 24px;
-  background-color: #bbe5b3;
+  background-color: beige;
   border: 2px solid black;
   border-radius: 8px;
+  width: 50% ;
+  margin-left: 25%;
+  opacity: 95%;
 }
 
 .search-bar {
@@ -103,12 +106,16 @@
   border-radius: 4px;
   font-size: large;
   padding: 0.5rem;
+  width: 75%;
+
 }
 
 .search-title-label {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 800;
   margin-bottom: 12px;
+
+  
 }
 
 /* Shared components across app */
@@ -134,8 +141,9 @@
 
 /* Nominations */
 .remove-button {
-  background-color: #de3618;
+  background-color: #b91c00;
   color: white;
+
 }
 
 .nomination-banner {
@@ -151,12 +159,23 @@
   border-radius: 8px;
 }
 
+
+
+
+
+
+
 /* Title Component */
+
 .title-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+
   align-items: center;
+  position:fixed;
+  z-index: 10;
+  width:100%;
+  background-color: beige;
 }
 
 .title-logo-container {
@@ -168,17 +187,23 @@
 }
 
 .title-label {
-  font-family: PoetsenOneRegular;
-  font-size: 55px;
+  font-family: ShopifySans;
+
+  font-size: 36px;
   margin-left: 12px;
-  font-weight: bold;
+  font-weight:900;
+  padding-left: 25%;
+  color: black;
 }
 
 
 .title-logo {
-  height: 9vmax;
+  height: 5vmax;
   pointer-events: none;
 }
+
+
+
 
 /* Attribution  */
 .attribution-container {
@@ -190,20 +215,8 @@
 }
 
 /* Media queries */
-@media (prefers-reduced-motion: no-preference) {
-  .title-logo {
-    animation: App-logo-spin infinite 30s linear;
-  }
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 @media screen and (max-width: 700px) {
   .content-container {
@@ -224,4 +237,23 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+
+  
 }
+
+
+ /* video */
+
+#myVideo {
+  width:100%;
+  height: -20%;
+  margin-top: 5%;
+  z-index: -1;
+  position:absolute;
+
+
+}
+
+
+
+

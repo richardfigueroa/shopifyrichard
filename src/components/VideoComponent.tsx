@@ -1,18 +1,18 @@
 import vid from '../resources/movie-montage.mp4';
 
 
-const TitleComponent = () => {
+const VideoComponent = () => {
 
   return (
-    <div className="testing">
-   
- <video autoPlay muted loop id="myVideo">
-<source src={vid} type="video/mp4"/>
+    <div className="videoContainer">
 
-</video>
-</div>
-    
+      <video autoPlay muted loop id="myVideo">
+        <source src={vid} type="video/mp4" />
+
+      </video>
+    </div>
+
   );
 };
 
-export default TitleComponent;
+export default VideoComponent;

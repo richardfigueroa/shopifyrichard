@@ -38,7 +38,7 @@ function App() {
   const addNomination = async (imdbID: string) => {
     if (nominations.length >= MAX_NOMINATION_LENGTH) {
       setAtMax(true);
-      return ;
+      return;
     }
 
     const movie = findMovieByImdbId(imdbID, searchResults);
@@ -76,45 +76,39 @@ function App() {
     debouncedFunction();
   };
 
-  let alert = <div/>;
+  let alert = <div />;
 
-  if(atMax === true){
+  if (atMax === true) {
     alert = <SweetAlert warning title="Max nominations reached." onConfirm={hideAlert}>I am sorry user, I am afraid I can't let you do that. Please remove a nomination to add an alternate movie.</SweetAlert>;
-  } else{
-    alert = <div/>;
+  } else {
+    alert = <div />;
   }
 
   return (
     <div>
- <TitleComponent />
- 
+      <TitleComponent />
 
- <VideoComponent></VideoComponent>
-    <div className="app-container">
-     
-     
+      {/* <VideoComponent/> */}
+      <div className="app-container">
 
-    
-
-      <SearchContainerComponent
-        input={input}
-        onChange={onSearchBarTextChange}
-      />
-      <div>
-      {alert}
-
+        <SearchContainerComponent
+          input={input}
+          onChange={onSearchBarTextChange}
+        />
+        <div>
+          {alert}
+        </div>
+        <ContentContainerComponent
+          searchResultError={searchResultError}
+          results={searchResults}
+          nominations={nominations}
+          query={input}
+          onAddNominationClick={addNomination}
+          onRemoveNominationClick={removeNomination}
+          MAX_NOMINATION_LENGTH={MAX_NOMINATION_LENGTH}
+        />
+        <AttributionComponent />
       </div>
-      <ContentContainerComponent
-        searchResultError={searchResultError}
-        results={searchResults}
-        nominations={nominations}
-        query={input}
-        onAddNominationClick={addNomination}
-        onRemoveNominationClick={removeNomination}
-        MAX_NOMINATION_LENGTH={MAX_NOMINATION_LENGTH}
-      />
-      <AttributionComponent />
-    </div>
     </div>
   );
 }

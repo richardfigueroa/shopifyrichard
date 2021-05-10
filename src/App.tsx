@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Movie } from "./models/Movie";
 import "./App.css";
 import TitleComponent from "./components/TitleComponent";

@@ -7,9 +7,9 @@ const TitleComponent = () => {
         <img src={shopifyLogo} className="title-logo" alt="logo" />
       </div>
       <div className={"title-label"}>The Shoppies</div>
-     
+
     </div>
-    
+
   );
 };
 
